@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Tech Newsletter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				font-family: 'Plus Jakarta Sans', sans-serif;
+				margin: 0;
+				padding: 40px 20px;
+				background-color: #ffffff;
+				color: #333;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font-weight: 600;
+				overflow-x: hidden;
+			}
+
+			.header-container {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			h1 {
+				font-size: 48px;
+				color: #0b3d2e;
+				margin: 40px 0 10px 0;
+				font-weight: 700;
+				opacity: 0;
+				animation: floatIn 0.5s ease forwards;
+				animation-delay: 0.2s;
+			}
+
+			.subtitle {
+				font-size: 18px;
+				color: #646d9c;
+				margin-bottom: 40px;
+				font-weight: 600;
+				opacity: 0;
+				animation: floatIn 0.5s ease forwards;
+				animation-delay: 0.4s;
+			}
+
+			.articles-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+			}
+
+			.article-card {
+				width: 100%;
+				max-width: 800px;
+				border-radius: 16px;
+				border: 1px solid #e0e4f0;
+				box-shadow: 0 2px 6px rgba(56, 54, 99, 0.08);
+				text-decoration: none;
+				color: #333;
+				overflow: hidden;
+				cursor: pointer;
+				opacity: 0;
+				will-change: transform;
+				animation: floatIn 0.5s ease forwards;
+				animation-delay: 0.6s;
+				transition: transform 0.3s ease, box-shadow 0.3s ease,
+					border-color 0.3s ease;
+			}
+
+			.article-card .content {
+				background: #fff;
+				border-radius: 16px;
+				padding: 45px 50px;
+				transition: transform 0.3s ease;
+			}
+
+			.date {
+				font-size: 16px;
+				color: #646d9c;
+				text-transform: uppercase;
+				margin: 20px 0 22px 0;
+				font-weight: 600;
+				transition: color 0.25s ease-in-out;
+			}
+
+			h2 {
+				font-size: 22px;
+				margin-bottom: 18px;
+				color: #0b3d2e;
+				font-weight: 700;
+				transition: color 0.2s ease-in-out;
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 1.75;
+				color: #4a4a4a;
+				margin-bottom: 10px;
+				font-weight: 600;
+			}
+
+			.article-card:hover {
+				transform: scale(1.05);
+				box-shadow: 0 10px 25px rgba(56, 54, 99, 0.2);
+				border-color: #b5cbb7;
+			}
+
+			.article-card:hover .content {
+				transform: translateY(-10px);
+			}
+
+			.article-card:hover .date {
+				color: #4a5c46;
+			}
+
+			.article-card:hover h2 {
+				color: #6d9270;
+			}
+
+			@keyframes floatIn {
+				0% {
+					opacity: 0;
+					transform: translateY(40px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@media (max-width: 895px) {
+				body {
+					padding: 40px 30px;
+				}
+				.article-card .content {
+					padding: 30px 25px;
+				}
+				.article-card:hover {
+					transform: scale(1.03);
+				}
+				.article-card:hover .content {
+					transform: translateY(-8px);
+				}
+			}
+
+			@media (max-width: 480px) {
+				body {
+					padding: 40px 25px;
+				}
+				.article-card .content {
+					padding: 20px;
+				}
+				h1 {
+					font-size: 36px;
+				}
+				h2 {
+					font-size: 20px;
+				}
+				p {
+					font-size: 16px;
+				}
+				.article-card:hover {
+					transform: scale(1.02);
+				}
+				.article-card:hover .content {
+					transform: translateY(-6px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header-container">
+			<h1>Tech Newsletters</h1>
+			<div class="subtitle">
+				Stay updated with the latest in technology
+			</div>
+		</div>
+		<div class="articles-container">{articles}</div>
+	</body>
+</html>
