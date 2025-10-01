@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Tech Newsletter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				font-family: 'Plus Jakarta Sans', sans-serif;
+				margin: 0;
+				padding: 40px 20px;
+				background-color: #ffffff;
+				color: #333;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font-weight: 600;
+				overflow-x: hidden;
+			}
+
+			.header-container {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			h1 {
+				font-size: 48px;
+				color: #0b3d2e;
+				margin: 40px 0 10px 0;
+				font-weight: 700;
+				opacity: 0;
+				animation: floatIn 0.5s ease forwards;
+				animation-delay: 0.2s;
+			}
+
+			.subtitle {
+				font-size: 18px;
+				color: #646d9c;
+				margin-bottom: 40px;
+				font-weight: 600;
+				opacity: 0;
+				animation: floatIn 0.5s ease forwards;
+				animation-delay: 0.4s;
+			}
+
+			.articles-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+			}
+
+			.article-card {
+				width: 100%;
+				max-width: 800px;
+				border-radius: 16px;
+				border: 1px solid #e0e4f0;
+				box-shadow: 0 2px 6px rgba(56, 54, 99, 0.08);
+				text-decoration: none;
+				color: #333;
+				overflow: hidden;
+				cursor: pointer;
+				opacity: 0;
+				will-change: transform;
+				animation: floatIn 0.5s ease forwards;
+				animation-delay: 0.6s;
+				transition: transform 0.3s ease, box-shadow 0.3s ease,
+					border-color 0.3s ease;
+			}
+
+			.article-card .content {
+				background: #fff;
+				border-radius: 16px;
+				padding: 45px 50px;
+				transition: transform 0.3s ease;
+			}
+
+			.date {
+				font-size: 16px;
+				color: #646d9c;
+				text-transform: uppercase;
+				margin: 20px 0 22px 0;
+				font-weight: 600;
+				transition: color 0.25s ease-in-out;
+			}
+
+			h2 {
+				font-size: 22px;
+				margin-bottom: 18px;
+				color: #0b3d2e;
+				font-weight: 700;
+				transition: color 0.2s ease-in-out;
+			}
+
+			p {
+				font-size: 18px;
+				line-height: 1.75;
+				color: #4a4a4a;
+				margin-bottom: 10px;
+				font-weight: 600;
+			}
+
+			.article-card:hover {
+				transform: scale(1.05);
+				box-shadow: 0 10px 25px rgba(56, 54, 99, 0.2);
+				border-color: #b5cbb7;
+			}
+
+			.article-card:hover .content {
+				transform: translateY(-10px);
+			}
+
+			.article-card:hover .date {
+				color: #4a5c46;
+			}
+
+			.article-card:hover h2 {
+				color: #6d9270;
+			}
+
+			@keyframes floatIn {
+				0% {
+					opacity: 0;
+					transform: translateY(40px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			@media (max-width: 895px) {
+				body {
+					padding: 40px 30px;
+				}
+				.article-card .content {
+					padding: 30px 25px;
+				}
+				.article-card:hover {
+					transform: scale(1.03);
+				}
+				.article-card:hover .content {
+					transform: translateY(-8px);
+				}
+			}
+
+			@media (max-width: 480px) {
+				body {
+					padding: 40px 25px;
+				}
+				.article-card .content {
+					padding: 20px;
+				}
+				h1 {
+					font-size: 36px;
+				}
+				h2 {
+					font-size: 20px;
+				}
+				p {
+					font-size: 16px;
+				}
+				.article-card:hover {
+					transform: scale(1.02);
+				}
+				.article-card:hover .content {
+					transform: translateY(-6px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header-container">
+			<h1>Tech Newsletters</h1>
+			<div class="subtitle">
+				Stay updated with the latest in technology
+			</div>
+		</div>
+		<div class="articles-container">
+        <a class="article-card" href="https://www.wired.com/story/peloton-iq-lineup-specs-prices/" target="_blank">
+            <div class="content">
+                <div class="date">October 01, 2025</div>
+                <h2>Peloton Is Having Its Biggest Hardware Launch in Years</h2>
+                <p>Peloton debuts a new AI-powered service with computer vision, called Peloton IQ. The company is revamping its entire hardware lineup as part of a new Cross Training series. The new Bike, Tread, and Row all have a swivel screen to switch between floor and cardio exercises. The upgraded Plus line in the Cross Training Series comes at a higher price point and includes the movement tracking camera, speakers with a woofer and Sonos tuning, hands-free control, and a fan.</p>
+            </div>
+        </a>
+    
+
+        <a class="article-card" href="https://www.theverge.com/news/790285/apple-smart-glasses-vision-pro" target="_blank">
+            <div class="content">
+                <div class="date">October 01, 2025</div>
+                <h2>Apple sidelines lighter Vision Pro to prioritize smart glasses</h2>
+                <p>Apple is speeding up work on smart glasses that would compete with similar offerings from Meta. The company is apparently working on at least two different versions: a pair without a display that it could reveal next year and launch in 2027, and a pair with a display originally planned for 2028. Apple’s glasses will have speakers, cameras, come in multiple styles, and “will rely heavily on voice interaction and artificial intelligence,” according to Bloomberg. Apple is also working on a chip specifically designed for its smart glasses, Bloomberg has previously reported.</p>
+            </div>
+        </a>
+    
+
+        <a class="article-card" href="https://www.engadget.com/deals/the-second-gen-apple-watch-se-drops-to-a-record-low-price-ahead-of-prime-day-162845138.html?src=rss" target="_blank">
+            <div class="content">
+                <div class="date">October 01, 2025</div>
+                <h2>The second-gen Apple Watch SE drops to a record-low price ahead of Prime Day</h2>
+                <p>The second-gen Apple Watch SE with LTE connectivity has dropped to $189. That's a new record low price for this 40mm variant with a small/medium band. The discount applies to versions with an ink sport loop and denim sport band. Several variants of the Apple Watch Series 10 are on sale on Amazon as well. That starts at $240 for a GPS and Wi-Fi model without LTE connectivity. The third-gen SE 3 is now our pick for the best budget Apple Watch.</p>
+            </div>
+        </a>
+    </div>
+	</body>
+</html>
