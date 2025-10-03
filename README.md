@@ -2,7 +2,7 @@
 
 A Python newsletter generator that scrapes RSS feeds, summarizes the content using the Hugging Face BART model, and outputs a clean HTML newsletter using a template.
 
-This project currently fetches tech news but can be adapted to any RSS feed. Articles are summarized and output as a `newsletter.html` file using a template, creating a simple and readable newsletter.
+This project currently fetches tech news but can be adapted to any RSS feed. Articles are summarized and output as a `index.html` file using a template, creating a simple and readable newsletter.
 
 ## Features
 
