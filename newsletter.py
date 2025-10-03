@@ -147,10 +147,7 @@ def main():
     logging.info("Building HTML...")
     html_content = build_html(summarized_articles)
 
-    output_dir = "output"
-    os.makedirs(output_dir, exist_ok=True)
-
-    output_path = os.path.join(output_dir, "index.html")
+    output_path = "index.html"
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_content)
@@ -160,5 +157,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
