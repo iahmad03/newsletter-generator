@@ -147,8 +147,7 @@ def main():
     logging.info("Building HTML...")
     html_content = build_html(summarized_articles)
 
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(script_dir, "output")
+    output_dir = "output"
     os.makedirs(output_dir, exist_ok=True)
 
     output_path = os.path.join(output_dir, "newsletter.html")
@@ -161,3 +160,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
