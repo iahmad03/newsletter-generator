@@ -150,7 +150,7 @@ def main():
     output_dir = "output"
     os.makedirs(output_dir, exist_ok=True)
 
-    output_path = os.path.join(output_dir, "newsletter.html")
+    output_path = os.path.join(output_dir, "index.html")
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_content)
@@ -160,4 +160,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
