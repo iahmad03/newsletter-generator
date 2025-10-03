@@ -147,11 +147,7 @@ def main():
     logging.info("Building HTML...")
     html_content = build_html(summarized_articles)
 
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(script_dir, "output")
-    os.makedirs(output_dir, exist_ok=True)
-
-    output_path = os.path.join(output_dir, "newsletter.html")
+    output_path = "index.html"
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(html_content)
